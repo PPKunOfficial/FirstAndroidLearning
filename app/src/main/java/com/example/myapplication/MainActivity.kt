@@ -15,9 +15,27 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun sendMessage(view: View) {
-        val editText = findViewById<EditText>(R.id.editTextTextPersonName)
+        val editText = findViewById<EditText>(R.id.editTextTextPersonName) // 在活动中查找内容id
+        /*
+    <EditText // <内容>
+        android:id="@+id/editTextTextPersonName" // (R.id.内容)
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/edit_message"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+         */
         val message = editText.text.toString()
         val intent = Intent(this, DisplayMessageActivity::class.java).apply {
+            /*
+Intent 构造函数会获取两个参数：Context 和 Class。
+首先使用 Context 参数，因为 Activity 类是 Context 的子类。
+在本例中，系统将 Intent, 传递到的应用组件的 Class 参数是要启动的 activity。
+*/
             putExtra(EXTRA_MESSAGE, message) // 方法将 EditText 的值添加到 intent。Intent 能够以称为“extra”的键值对形式携带数据类型。
             // 当前键是一个公共常量 EXTRA_MESSAGE，因为下一个 activity 将使用该键检索文本值。为 intent extra 定义键时，最好使用应用的软件包名称作为前缀。这样可以确保这些键是独一无二的，这在您的应用需要与其他应用进行交互时会很重要。
         }
