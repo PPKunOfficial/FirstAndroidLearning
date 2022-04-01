@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
          */
-        val message = editText.text.toString()
+        val message = editText.text.toString() // 获取xx的text并且转换为String类型
         val intent = Intent(this, DisplayMessageActivity::class.java).apply {
             /*
 Intent 构造函数会获取两个参数：Context 和 Class。
