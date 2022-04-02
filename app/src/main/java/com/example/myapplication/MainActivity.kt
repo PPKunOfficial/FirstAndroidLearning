@@ -7,6 +7,8 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 
 const val EXTRA_MESSAGE = "com.example.myapplication.MESSAGE"
+const val EXTRA_NUMBER1 = "com.example.myapplication.NUMBER1"
+const val EXTRA_NUMBER2 = "com.example.myapplication.NUMBER2"
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,5 +42,17 @@ Intent 构造函数会获取两个参数：Context 和 Class。
             // 当前键是一个公共常量 EXTRA_MESSAGE，因为下一个 activity 将使用该键检索文本值。为 intent extra 定义键时，最好使用应用的软件包名称作为前缀。这样可以确保这些键是独一无二的，这在您的应用需要与其他应用进行交互时会很重要。
         }
         startActivity(intent) // 方法将启动一个由 Intent 指定的 DisplayMessageActivity 实例
+    }
+
+    fun sendNumber(view: View){
+        val fnum=findViewById<EditText>(R.id.fNum )
+        val snum=findViewById<EditText>(R.id.sNum)
+        val message1=fnum.text
+        val message2=snum.text
+        val intent=Intent(this,PlusNumber::class.java).apply {
+            putExtra(EXTRA_NUMBER1,message1)
+            putExtra(EXTRA_NUMBER2,message2)
+        }
+        startActivity(intent)
     }
 }

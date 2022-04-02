@@ -2,4 +2,6 @@
     <string name="app_name">My Application</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
+    <string name="button_plus">Plus</string>
+    <string name="edit_number">Enter Num</string>
 </resources>
