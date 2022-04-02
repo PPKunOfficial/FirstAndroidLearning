@@ -46,15 +46,11 @@ Intent 构造函数会获取两个参数：Context 和 Class。
     }
 
     fun sendNumber(view: View){
-        val fnum=findViewById<EditText>(R.id.fNum )
-        val snum=findViewById<EditText>(R.id.sNum)
-        val message1=fnum.text
-        val message2=snum.text
-        Log.d("msg1:", "$message2")
-        Log.d("msg2","$message2")
+        val msg1=findViewById<EditText>(R.id.fNum)
+        val msg2=findViewById<EditText>(R.id.sNum)
         val intent=Intent(this,PlusNumber::class.java).apply {
-            putExtra(EXTRA_NUMBER1,message1)
-            putExtra(EXTRA_NUMBER2,message2)
+            putExtra(EXTRA_NUMBER1,msg1.text.toString())
+            putExtra(EXTRA_NUMBER2,msg2.text.toString())
         }
         startActivity(intent)
     }
