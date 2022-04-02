@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
@@ -49,6 +50,8 @@ Intent 构造函数会获取两个参数：Context 和 Class。
         val snum=findViewById<EditText>(R.id.sNum)
         val message1=fnum.text
         val message2=snum.text
+        Log.d("msg1:", "$message2")
+        Log.d("msg2","$message2")
         val intent=Intent(this,PlusNumber::class.java).apply {
             putExtra(EXTRA_NUMBER1,message1)
             putExtra(EXTRA_NUMBER2,message2)
