@@ -2,7 +2,6 @@ package com.example.myapplication
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
@@ -52,6 +51,11 @@ Intent 构造函数会获取两个参数：Context 和 Class。
             putExtra(EXTRA_NUMBER1,msg1.text.toString())
             putExtra(EXTRA_NUMBER2,msg2.text.toString())
         }
+        startActivity(intent)
+    }
+
+    fun openListView(view: View){
+        val intent=Intent(this,ListView::class.java).apply {}
         startActivity(intent)
     }
 }

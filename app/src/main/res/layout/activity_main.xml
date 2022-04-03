@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:autofillHints="@string/edit_message"
         android:ems="10"
         android:hint="@string/edit_message"
         android:inputType="textPersonName"
@@ -48,6 +49,7 @@
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:autofillHints="@string/edit_number"
         android:ems="10"
         android:hint="@string/edit_number"
         android:inputType="number"
@@ -58,6 +60,7 @@
         android:id="@+id/sNum"
         android:layout_width="106dp"
         android:layout_height="41dp"
+        android:autofillHints="@string/edit_number"
         android:ems="10"
         android:hint="@string/edit_number"
         android:inputType="number"
@@ -65,4 +68,17 @@
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/fNum" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="openListView"
+        android:text="@string/openList"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
 </androidx.constraintlayout.widget.ConstraintLayout>

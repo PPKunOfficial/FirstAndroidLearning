@@ -11,7 +11,7 @@ class ListView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_view)
         val listView=findViewById<ListView>(R.id.listview1)
-        val arraya= ArrayAdapter(this,android.R.layout.simple_list_item_1,strList)
-        listView.adapter=arraya
+        val arrayAdapter= ArrayAdapter(this,android.R.layout.simple_list_item_1,strList)
+        listView.adapter=arrayAdapter
     }
 }
