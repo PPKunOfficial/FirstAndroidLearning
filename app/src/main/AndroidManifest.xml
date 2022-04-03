@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".RecyclerView"
+            android:exported="false" />
+        <activity
             android:name=".ListView"
             android:exported="false"
             android:parentActivityName=".MainActivity">
